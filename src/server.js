@@ -15,6 +15,7 @@ const server = new GraphQLServer({schema,
     context:({request})=>({request})
 });
 
+
 server.express.use(logger("dev"));
 server.express.use(authenticateJwt);
 
