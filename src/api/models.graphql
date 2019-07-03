@@ -15,8 +15,8 @@ type User{
   comments: [Comment!]!
   rooms: [Room!]! 
   loginSecret: String
-  createAt: String
-  updateAt:String
+  createdAt: String
+  updatedAt:String
 }
 
 type Post{
@@ -29,16 +29,16 @@ type Post{
   comments: [Comment!]!
   isLiked: Boolean!
   likeCount:Int!
-  createAt: String
-  updateAt:String
+  createdAt: String
+  updatedAt:String
 }
 
 type Like{
   id: ID!
   user: User!
   post: Post!
-  createAt: String
-  updateAt:String
+  createdAt: String
+  updatedAt:String
 }
 
 type Comment{
@@ -46,24 +46,24 @@ type Comment{
   text: String!
   user: User!
   post: Post!
-  createAt: String
-  updateAt:String
+  createdAt: String
+  updatedAt:String
 }
 
 type File{
   id: ID! 
   url: String!
   post: Post!
-  createAt: String
-  updateAt:String
+  createdAt: String
+  updatedAt:String
 }
 
 type Room{
   id: ID!
   participants: [User!]!
   message: [Message!]!
-  createAt: String
-  updateAt:String
+  createdAt: String
+  updatedAt:String
 }
 type Message{
     id: ID!
@@ -71,8 +71,8 @@ type Message{
     from: User! 
     to: User 
     room:Room!
-    createAt: String
-    updateAt:String
+    createdAt: String
+    updatedAt:String
 }
 type UserProfile{
   user: User!

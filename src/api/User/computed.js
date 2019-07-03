@@ -30,6 +30,5 @@ export default {
       const { id: parentId } = parent;
       return user.id === parentId;
     }
-  },
-
+  }
 };
