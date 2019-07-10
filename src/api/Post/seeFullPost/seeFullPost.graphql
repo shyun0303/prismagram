@@ -1,3 +1,3 @@
-type Query{
-    seeFullPost(id:String!): Post!
+type Query {
+  seeFullPost(id: String!): Post!
 }

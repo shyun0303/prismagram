@@ -1,82 +1,85 @@
-type User{
+type User {
   id: ID!
+  avatar: String
   username: String!
   email: String!
-  firstname: String 
-  lastname: String
-  fullname: String
+  firstName: String
+  lastName: String
+  fullName: String
   isFollowing: Boolean!
-  isSelf:Boolean!
+  isSelf: Boolean!
   bio: String
-  followers:[User!]!
-  following:[User!]!
+  following: [User!]!
+  followers: [User!]!
   posts: [Post!]!
   likes: [Like!]!
   comments: [Comment!]!
-  rooms: [Room!]! 
+  rooms: [Room!]!
   loginSecret: String
   createdAt: String
-  updatedAt:String
+  updatedAt: String
 }
 
-type Post{
-  id: ID! 
-  location:String!
-  user: User!
+type Post {
+  id: ID!
+  location: String
   caption: String!
-  files:[File!]!
+  user: User!
+  files: [File!]!
   likes: [Like!]!
   comments: [Comment!]!
   isLiked: Boolean!
-  likeCount:Int!
+  likeCount: Int!
   createdAt: String
-  updatedAt:String
+  updatedAt: String
 }
 
-type Like{
+type Like {
   id: ID!
   user: User!
   post: Post!
   createdAt: String
-  updatedAt:String
+  updatedAt: String
 }
 
-type Comment{
-  id: ID! 
+type Comment {
+  id: ID!
   text: String!
   user: User!
   post: Post!
   createdAt: String
-  updatedAt:String
+  updatedAt: String
 }
 
-type File{
-  id: ID! 
+type File {
+  id: ID!
   url: String!
   post: Post!
   createdAt: String
-  updatedAt:String
+  updatedAt: String
 }
 
-type Room{
+type Room {
   id: ID!
   participants: [User!]!
-  message: [Message!]!
+  messages: [Message!]!
   createdAt: String
-  updatedAt:String
+  updatedAt: String
 }
-type Message{
-    id: ID!
-    text: String! 
-    from: User! 
-    to: User 
-    room:Room!
-    createdAt: String
-    updatedAt:String
+
+type Message {
+  id: ID!
+  text: String!
+  from: User!
+  to: User!
+  room: Room!
+  createdAt: String
+  updatedAt: String
 }
-type UserProfile{
+
+type UserProfile {
   user: User!
-  posts:[Post!]!
-  createAt: String
-  updateAt:String
+  posts: [Post!]!
+  createdAt: String
+  updatedAt: String
 }

@@ -1,6 +1,5 @@
 import { prisma } from "../../../../generated/prisma-client";
 
-
 export default {
   Query: {
     seeFeed: async (_, __, { request, isAuthenticated }) => {
